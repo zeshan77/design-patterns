@@ -1,0 +1,32 @@
+<?php
+declare(strict_types = 1);
+
+namespace App\FactoryMethod\RealWorldExample;
+
+class FacebookConnector implements SocialNetworkConnector
+{
+    protected $username;
+    protected $password;
+    
+    public function __construct(string $username, string $password)
+    {
+        $this->username = $username;
+        $this->password = $password;
+    }
+
+    public function login(): void
+    {
+        var_dump('log in to Facebook using username = ' . $this->username . ' and password = '. $this->password);
+    }
+
+    public function post(string $content): void
+    {
+        var_dump('Posting on to Facebook...: ' . $content);
+
+    }
+
+    public function logout(): void
+    {
+        var_dump('Logout of Facebook');
+    }
+}
