@@ -1,0 +1,8 @@
+// Concrete Classes
+    1. Base color
+    2. Secondary color
+    3. Anchor color
+    4. Background color
+    5. Button
+    6. Checkbox
+    7. Modal
